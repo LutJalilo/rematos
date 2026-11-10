@@ -1,0 +1,31 @@
+REMATOS – estrutura do site
+index.html        página principal (ponto de entrada do site)
+404.html          página de erro "não encontrada"
+robots.txt        instruções para motores de busca
+.htaccess         configuração para Apache/cPanel (HTTPS, compressão, cache)
+_headers          configuração equivalente para Netlify / Cloudflare Pages
+css/style.css     todo o design (inclui o tema escuro no fim do ficheiro)
+js/config.js      contactos, redes sociais e PREÇOS do orçamento (editar aqui)
+js/i18n.js        traduções PT/EN
+js/quote.js       orçamento automático
+js/main.js        animações, menu, teste de safety, projectos
+js/theme.js       tema claro/escuro (claro é o padrão)
+assets/           favicon, ícone de telemóvel e imagem de partilha (og-image.png)
+assets/video/     vídeo de apresentação (rematos-video-45s.mp4) e imagem de capa (rematos-poster.jpg)
+assets/projectos/ coloque aqui as fotos: residencial.jpg, piscinas.jpg, fiscalizacao.jpg, paisagismo.jpg, furos.jpg, safety.jpg
+qr/               códigos QR do WhatsApp
+
+COMO PUBLICAR
+1. Envie TODO o conteúdo desta pasta para a raiz do alojamento (public_html no cPanel),
+   de modo que index.html fique directamente na raiz, não dentro de uma subpasta.
+   Em Netlify, Cloudflare Pages ou Vercel: arraste a pasta (ou o zip) para o painel.
+2. Instale o certificado SSL (HTTPS) no painel do alojamento. Só depois mantenha activa
+   a regra de redireccionamento HTTPS do .htaccess.
+3. Depois de ter o domínio, faça estes ajustes (opcionais, mas recomendados):
+   - em index.html, na linha og:image, use o endereço completo, por exemplo
+     https://www.seudominio.co.mz/assets/og-image.png (a pré-visualização ao partilhar
+     no WhatsApp/Facebook funciona melhor com o endereço completo);
+   - em robots.txt, acrescente: Sitemap: https://www.seudominio.co.mz/sitemap.xml
+     (apenas se criar um sitemap).
+4. Teste: abra o site no telemóvel e no computador, mude o idioma e o tema, faça um
+   orçamento de teste e confirme que os botões de WhatsApp e e-mail abrem correctamente.
